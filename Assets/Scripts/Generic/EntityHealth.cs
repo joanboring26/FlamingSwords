@@ -167,7 +167,7 @@ public class EntityHealth : MonoBehaviour
         {
             Instantiate(explosionRef, transform.position, transform.rotation);
             camShaker.AddCustomShake(-dir, CameraShake.ShakeType.PLAYERDAM);
-            StartCoroutine(PrevHealthStart(givVal));
+            //StartCoroutine(PrevHealthStart(givVal));
 
             nextDamage = Time.time + nextDamageDelay;
             hp += givVal;
@@ -216,15 +216,8 @@ public class EntityHealth : MonoBehaviour
     {
         stamina += givVal;
     }
-
-
-
-<<<<<<< HEAD
-        postP.sharedProfile.TryGetSettings<Grain>(out grainInt);
-        grainInt.intensity.Override(1-(hp/100));
-    }
-=======
->>>>>>> master
+        //postP.sharedProfile.TryGetSettings<Grain>(out grainInt);
+        //grainInt.intensity.Override(1-(hp/100));
 
     IEnumerator PrevHealthStart( float damage)
     {

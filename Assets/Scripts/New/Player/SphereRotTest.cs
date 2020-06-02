@@ -6,6 +6,7 @@ public class SphereRotTest : MonoBehaviour
 {
     public Transform holder;
     public Rigidbody2D rig;
+    public Renderer matRend;
     public Material mat;
     float yRot = 0;
     // Update is called once per frame
