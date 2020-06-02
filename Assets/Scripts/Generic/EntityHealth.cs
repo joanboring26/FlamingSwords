@@ -157,7 +157,7 @@ public class EntityHealth : MonoBehaviour
         }
 
         healthbar.fillAmount = scaleToHP(hp);
-        GrainChange();
+       // GrainChange();
         
     }
 
@@ -195,7 +195,7 @@ public class EntityHealth : MonoBehaviour
         }
 
         healthbar.fillAmount = scaleToHP(hp);
-        GrainChange();
+       // GrainChange();
     }
 
     public void RecoverPrevHealth(int dealtDamage)
@@ -207,7 +207,7 @@ public class EntityHealth : MonoBehaviour
             healthbar.fillAmount = scaleToHP(hp);
         }
 
-        GrainChange();
+        //GrainChange();
         prevHealth=hp;
         prevHealthBar.fillAmount = scaleToHP(hp);
     }
@@ -218,12 +218,7 @@ public class EntityHealth : MonoBehaviour
     }
 
 
-    private void GrainChange(){
 
-        postP.sharedProfile.TryGetSettings<Grain>(out grainInt);
-        grainInt.intensity.Override(1-(hp/100));
-        Debug.Log(grainInt.intensity.value);
-    }
 
     IEnumerator PrevHealthStart( float damage)
     {

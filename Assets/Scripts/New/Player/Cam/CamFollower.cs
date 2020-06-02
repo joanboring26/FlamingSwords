@@ -9,15 +9,13 @@ public class CamFollower : MonoBehaviour
     public Transform followPos;
     public Transform currPos;
 
-    public PostProcessVolume pp;
-    private Grain grainInt;
+
 
     // Start is called before the first frame update
     void Start()
     {
         currPos.parent = null;
-        pp.profile.TryGetSettings<Grain>(out grainInt);
-        grainInt.intensity.Override(0);
+ 
     }
 
     // Update is called once per frame
