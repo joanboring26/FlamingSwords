@@ -1,8 +1,0 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/level_2.unity
-=======
-- path: Assets/Scenes/level_5.unity
->>>>>>> master
-  isLoaded: 1
-  isActive: 1
