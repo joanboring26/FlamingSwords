@@ -6,13 +6,20 @@ public class InventoryManager : MonoBehaviour
 {
     public AttackBase item1;
     public AttackBase item2;
+    public AttackBase ability1;
 
     public GameObject wepHolder;
     public HudManager HudMan;
     public EntityHealth playerStats;
 
+    public bool ability1OnStart = false;
     public bool m1m2Enabled = true;
+    public bool abilityEnabled = true;
 
+    private void Start()
+    {
+        HudMan.setAbility();
+    }
     void Update()
     {
         if (m1m2Enabled)
@@ -25,6 +32,14 @@ public class InventoryManager : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 if (item2 != null) item2.attack();
+            }
+        }
+
+        if(abilityEnabled)
+        {
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                if (ability1 != null) ability1.attack();
             }
         }
     }

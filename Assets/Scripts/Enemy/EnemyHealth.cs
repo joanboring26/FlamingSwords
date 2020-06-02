@@ -52,14 +52,14 @@ public class EnemyHealth : MonoBehaviour
 
             if (hp <= 0)
             {
-                if (deadSprite != null)
-                {
-                    Vector3 dir = attackDir.position - transform.position;
-                    Quaternion newRotation = Quaternion.AngleAxis(Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg, Vector3.forward);
-                    newRotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
+                //if (deadSprite != null)
+                //{
+                //    Vector3 dir = attackDir.position - transform.position;
+                //    Quaternion newRotation = Quaternion.AngleAxis(Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg, Vector3.forward);
+                //    newRotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
+                //}
 
-                    Instantiate(deadSprite, transform.position, newRotation);
-                }
+                Instantiate(deadSprite, transform.position, transform.rotation);
                 Instantiate(deathChunks, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
                 gameObject.SendMessage(deathMessage, hp);
                 

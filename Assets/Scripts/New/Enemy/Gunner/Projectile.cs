@@ -31,14 +31,19 @@ public class Projectile : MonoBehaviour
         Collider2D hitColliders = Physics2D.OverlapCircle(transform.position, parryTargetSearchRadius, parryTargets);
         if(hitColliders != null)
         {
+
             Vector2 dir = hitColliders.transform.position - transform.position;
             Quaternion newRotation = Quaternion.AngleAxis( Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg - 90, Vector3.forward);
             newRotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
 
-            transform.rotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
-            rig.velocity = transform.up * -velocity;
+            Debug.Log(Vector3.Angle(transform.up, -dir.normalized));
 
-            return true;
+            if (Vector3.Angle(transform.up, -dir.normalized) < 45)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
+                rig.velocity = transform.up * -velocity;
+                return true;
+            }
         }
         return false;
     }
@@ -54,13 +59,14 @@ public class Projectile : MonoBehaviour
             case "Parry":
                 gameObject.layer = 12;
                 velocity *= 1.6f;
+
+                Vector2 dir = other.transform.up;
+                Quaternion newRotation = Quaternion.AngleAxis(Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg - 90, Vector3.forward);
+                newRotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
+                transform.rotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
+
                 if (!findParryTarget())
                 {
-                    Vector2 dir = other.transform.position - transform.position;
-                    Quaternion newRotation = Quaternion.AngleAxis(Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg - 90, Vector3.forward);
-                    newRotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
-
-                    transform.rotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
                     rig.velocity = transform.up * -velocity;
                 }
                 break;
@@ -68,10 +74,8 @@ public class Projectile : MonoBehaviour
                 other.GetComponent<EnemyHealth>().ModHealth(damage * 3f, transform);
                 Destroy(gameObject);
                 break;
-            case "":
-
-                break;
             default:
+                Instantiate(expl, transform.position, Quaternion.Euler(Vector3.zero));
                 Destroy(gameObject);
                 break;
         }

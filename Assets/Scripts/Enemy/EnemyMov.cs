@@ -23,7 +23,6 @@ public class EnemyMov : MonoBehaviour
             }
             else
             {
-                Debug.Log("STOPPING");
                 retreating = true;
             }
 

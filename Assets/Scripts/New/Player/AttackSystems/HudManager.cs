@@ -9,6 +9,8 @@ public class HudManager : MonoBehaviour
     public GameObject inspectHolder;
     public Image mouse1;
     public Image mouse2;
+    public Image num1;
+    public Image num1Fill;
     public Image itemImage;
     public TextMeshProUGUI name;
     public TextMeshProUGUI type;
@@ -54,5 +56,26 @@ public class HudManager : MonoBehaviour
         }
     }
 
+
+    public void setAbility()
+    {
+        StartCoroutine(fadeTimer(4));
+    }
+
+    public IEnumerator fadeTimer(float fadeTime)
+    {
+        num1Fill.fillAmount = 0;
+        float fadeDurationInSeconds = fadeTime;
+        float timeout = 0.01f;
+        float fadeAmount = 1 / (fadeDurationInSeconds / timeout);
+
+        for (float f = 0; f <= 1; f += fadeAmount)
+        {
+            num1Fill.fillAmount = f;
+            yield return new WaitForSeconds(timeout);
+        }
+
+        num1Fill.fillAmount = 1;
+    }
 
 }
