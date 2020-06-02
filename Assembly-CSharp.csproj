@@ -179,7 +179,6 @@
      <Compile Include="Assets\Scripts\UI\UIPointerObj.cs" />
      <Compile Include="Assets\Scripts\UI\UITests.cs" />
      <Compile Include="Assets\UIParticleEffects\Scripts\UIParticleSystem.cs" />
-     <Compile Include="Assets\Volume.cs" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend Scroll.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
