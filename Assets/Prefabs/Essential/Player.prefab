@@ -803,10 +803,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item1: {fileID: 2688656074591842822}
   item2: {fileID: 9124274982557922719}
+  ability1: {fileID: 0}
   wepHolder: {fileID: 6567383089679914627}
   HudMan: {fileID: 0}
   playerStats: {fileID: 6567383089465403632}
+  ability1OnStart: 0
   m1m2Enabled: 1
+  abilityEnabled: 1
 --- !u!114 &6567383089465403632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,6 +866,7 @@ MonoBehaviour:
   camHolder: {fileID: 2473800009548774903}
   musicHolder: {fileID: 0}
   crossFiller: {fileID: 3827391248426273266}
+  postP: {fileID: 0}
 --- !u!114 &6567383088170664004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,7 +1596,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3b4dbd401eed025468503abefeddcf84, type: 2}
+  - {fileID: 2100000, guid: f0fbbdc5a3aaed54b81615e902fd3a07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1626,6 +1630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder: {fileID: 6567383088420047291}
   rig: {fileID: 6567383088170664002}
+  matRend: {fileID: 6567383090144397759}
   mat: {fileID: 2100000, guid: 3b4dbd401eed025468503abefeddcf84, type: 2}
 --- !u!1 &7533324290721848001
 GameObject:
@@ -1923,11 +1928,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6567383089679914626}
     m_Modifications:
-    - target: {fileID: 4927317809636150166, guid: 0dc7807bbb1ca62408a7b9d5aab76206,
-        type: 3}
-      propertyPath: m_Name
-      value: SwordHeldcomp
-      objectReference: {fileID: 0}
     - target: {fileID: 1187442359334863228, guid: 0dc7807bbb1ca62408a7b9d5aab76206,
         type: 3}
       propertyPath: playerStats
@@ -1988,6 +1988,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4927317809636150166, guid: 0dc7807bbb1ca62408a7b9d5aab76206,
+        type: 3}
+      propertyPath: m_Name
+      value: SwordHeldcomp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc7807bbb1ca62408a7b9d5aab76206, type: 3}
 --- !u!114 &2688656074591842822 stripped
@@ -2015,11 +2020,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6567383089679914626}
     m_Modifications:
-    - target: {fileID: 6404660139869482077, guid: 163e7db60003a1942947e22e5a1946a6,
-        type: 3}
-      propertyPath: m_Name
-      value: ParryHeldComp
-      objectReference: {fileID: 0}
     - target: {fileID: 1392915528956119224, guid: 163e7db60003a1942947e22e5a1946a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2089,6 +2089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404660139869482077, guid: 163e7db60003a1942947e22e5a1946a6,
+        type: 3}
+      propertyPath: m_Name
+      value: ParryHeldComp
       objectReference: {fileID: 0}
     - target: {fileID: 6404660139869482066, guid: 163e7db60003a1942947e22e5a1946a6,
         type: 3}

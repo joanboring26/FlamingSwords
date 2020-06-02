@@ -16,6 +16,7 @@ public class SphereRotTest : MonoBehaviour
 
     private void Start()
     {
+        mat = matRend.material;
         mat.color = new Color(1, 1, 1, 0);
     }
 
