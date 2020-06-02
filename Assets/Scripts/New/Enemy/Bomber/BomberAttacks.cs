@@ -48,6 +48,8 @@ public class BomberAttacks : MonoBehaviour
         visScript.movScript.nav.isStopped = true;
         visScript.movScript.nav.enabled = false;
         visScript.enabled = false;
+
+        soundSource.enabled = true;
         soundSource.PlayOneShot(preReadySound);
         yield return new WaitForSeconds(preReadyTime);
 
@@ -60,7 +62,6 @@ public class BomberAttacks : MonoBehaviour
             Destroy(objectBase);
         }
     }
-
 
     public IEnumerator starColChange()
     {

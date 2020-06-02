@@ -42,7 +42,7 @@ public class SoldierAttacks : MonoBehaviour
 
     public float attackDelay;
 
-
+    private IEnumerator coroutineEnum;
 
     float nextAttack;
     Vector3 attackPos;
@@ -57,7 +57,14 @@ public class SoldierAttacks : MonoBehaviour
     {
         originalDrag = rig.drag;
         rig.drag = preAttackDrag;
+
+        if (coroutineEnum != null)
+        {
+            StopCoroutine(coroutineEnum);
+        }
+        sndSrc.enabled = true;
         sndSrc.PlayOneShot(preAttackSnd);
+
         attackPos = givVision.detectedTransform.position;
         //
         dir = givVision.detectedTransform.position - givVision.npcTransform.position;
@@ -78,7 +85,9 @@ public class SoldierAttacks : MonoBehaviour
     {
         rig.drag = attackDrag;
         givVision.lookAtTarget = false;
+
         sndSrc.PlayOneShot(attackSnd);
+
         StartCoroutine(givAttackScript.attack());
         attackingSprite.SetActive(true);
         preAttackSprite.SetActive(false);
@@ -107,12 +116,28 @@ public class SoldierAttacks : MonoBehaviour
         attackStarted();
         yield return new WaitForSeconds(activeAttackTime);
         attackDone();
+
+        if (coroutineEnum != null)
+        {
+            StopCoroutine(coroutineEnum);
+        }
+        coroutineEnum = DisableTimer();
+        StartCoroutine(coroutineEnum);
+
         rig.velocity = rig.velocity/3;
     }
 
     public IEnumerator stunned(Vector3 parryPos)
     {
+        if (coroutineEnum != null)
+        {
+            StopCoroutine(coroutineEnum);
+        }
+        sndSrc.enabled = true;
         sndSrc.PlayOneShot(stunnedSnd);
+        coroutineEnum = DisableTimer();
+        StartCoroutine(coroutineEnum);
+
         givVision.enabled = false;
         givAttackScript.attackBox.enabled = false;
         givAttackScript.enabled = false;
@@ -125,6 +150,12 @@ public class SoldierAttacks : MonoBehaviour
         givAttackScript.enabled = true;
         givAttackScript.attackBox.enabled = false;
         givVision.enabled = true;
+    }
+
+    IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        sndSrc.enabled = false;
     }
 
     private void OnTriggerStay2D(Collider2D other)

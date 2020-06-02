@@ -29,6 +29,8 @@ public class EnemyVision : MonoBehaviour
     private Vector3 dir;
     private float angle = 0;
 
+    private IEnumerator coroutineEnum;
+
     private void Update()
     {
         if(detectedTarget && lookAtTarget && (detectedTransform != null))
@@ -53,7 +55,14 @@ public class EnemyVision : MonoBehaviour
             {
                 if (movScript.nav.velocity == Vector3.zero)
                 {
+                    if(coroutineEnum != null)
+                    {
+                        StopCoroutine(coroutineEnum);
+                    }
+                    sndSrc.enabled = true;
                     sndSrc.PlayOneShot(alert[Random.Range(0, alert.Length)]);
+                    coroutineEnum = DisableTimer();
+                    StartCoroutine(coroutineEnum);
                 }
                 movScript.MoveToDestination(detectedTransform.position);
                 detectedTarget = true;
@@ -68,7 +77,14 @@ public class EnemyVision : MonoBehaviour
 
     private void hitNPC(float givFloat)
     {
+        if (coroutineEnum != null)
+        {
+            StopCoroutine(coroutineEnum);
+        }
+        sndSrc.enabled = true;
         sndSrc.PlayOneShot(impactSound[Random.Range(0, impactSound.Length)]);
+        coroutineEnum = DisableTimer();
+        StartCoroutine(coroutineEnum);
     }
 
     public bool CheckRay()
@@ -83,6 +99,10 @@ public class EnemyVision : MonoBehaviour
         return false;
     }
 
-
+    IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        sndSrc.enabled = false;
+    }
 
 }

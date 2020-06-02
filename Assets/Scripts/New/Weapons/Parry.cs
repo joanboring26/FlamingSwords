@@ -5,6 +5,8 @@ using UnityEngine;
 public class Parry : AttackBase
 {
     [Header("Parry vars")]
+    public AudioSource sndSrc;
+    public AudioClip parryClip;
 
     public bool parrying = false;
 
@@ -16,6 +18,7 @@ public class Parry : AttackBase
 
     public GameObject visualParry;
 
+    private IEnumerator coroutineEnum;
     float nextParry = 0;
 
     private void Start()
@@ -41,6 +44,14 @@ public class Parry : AttackBase
         }
     }
 
+    public void parrySnd()
+    {
+        sndSrc.enabled = true;
+        sndSrc.PlayOneShot(parryClip);
+        coroutineEnum = DisableTimer();
+        StartCoroutine(coroutineEnum);
+    }
+
     public IEnumerator doParry()
     {
         StartCoroutine(playerStats.crossFiller.fadeTimer(parryRate - 0.4f));
@@ -51,5 +62,11 @@ public class Parry : AttackBase
         GetComponent<BoxCollider2D>().enabled = false;
         visualParry.SetActive(false);
         parrying = false;
+    }
+
+    IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        sndSrc.enabled = false;
     }
 }

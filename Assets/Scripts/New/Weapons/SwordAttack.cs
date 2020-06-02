@@ -28,6 +28,7 @@ public class SwordAttack : AttackBase
     private float prevTime = 0;
     private bool hitP = false;
 
+    private IEnumerator coroutineEnum;
 
     private void Start()
     {
@@ -49,7 +50,10 @@ public class SwordAttack : AttackBase
         if (!dontCheck)
         {
             //other.gameObject.GetComponent<EnemyHealth>();
-            other.GetComponent<EnemyHealth>().rig.AddForce(Vector3.Normalize(new Vector3(transform.position.x - other.transform.position.x, transform.position.y - other.transform.position.y)) * hitPushForce, ForceMode2D.Impulse);
+            if(other.GetComponent<EnemyHealth>().rig)
+            {
+                other.GetComponent<EnemyHealth>().rig.AddForce(Vector3.Normalize(new Vector3(transform.position.x - other.transform.position.x, transform.position.y - other.transform.position.y)) * hitPushForce, ForceMode2D.Impulse);
+            }
             other.GetComponent<EnemyHealth>().ModHealth(attackDmg, playerStats.playerRot);
             playerStats.RecoverPrevHealth((int)attackDmg);
 
@@ -80,7 +84,15 @@ public class SwordAttack : AttackBase
 
     public IEnumerator initAttack()
     {
+        if (coroutineEnum != null)
+        {
+            StopCoroutine(coroutineEnum);
+        }
+        swingSrc.enabled = true;
         swingSrc.PlayOneShot(swingSnds[Random.Range(0, swingSnds.Length)]);
+        coroutineEnum = DisableTimer();
+        StartCoroutine(coroutineEnum);
+
         attackVisual.SetActive(true);
         attackBox.enabled = true;
         yield return new WaitForSeconds(activeAttackColliderTime);
@@ -91,4 +103,11 @@ public class SwordAttack : AttackBase
             hitEnts[i] = 0;
         }
     }
+
+    IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        swingSrc.enabled = false;
+    }
+
 }

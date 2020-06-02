@@ -17,7 +17,6 @@ public class Projectile : MonoBehaviour
     public bool parried;
     public bool destroy = true;
 
-
     private void Start()
     {
         //rig.AddRelativeForce(new Vector2(velocity, 0), ForceMode2D.Impulse);
@@ -35,8 +34,6 @@ public class Projectile : MonoBehaviour
             Vector2 dir = hitColliders.transform.position - transform.position;
             Quaternion newRotation = Quaternion.AngleAxis( Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg - 90, Vector3.forward);
             newRotation = Quaternion.Euler(0, 180, newRotation.eulerAngles.z);
-
-            Debug.Log(Vector3.Angle(transform.up, -dir.normalized));
 
             if (Vector3.Angle(transform.up, -dir.normalized) < 45)
             {
@@ -59,6 +56,8 @@ public class Projectile : MonoBehaviour
             case "Parry":
                 gameObject.layer = 12;
                 velocity *= 1.6f;
+
+                other.GetComponent<Parry>().parrySnd();
 
                 Vector2 dir = other.transform.up;
                 Quaternion newRotation = Quaternion.AngleAxis(Mathf.Atan2(-dir.y, dir.x) * Mathf.Rad2Deg - 90, Vector3.forward);
@@ -87,5 +86,4 @@ public class Projectile : MonoBehaviour
         yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
     }
-
 }

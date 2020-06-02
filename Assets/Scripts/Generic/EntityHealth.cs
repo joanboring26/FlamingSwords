@@ -222,7 +222,6 @@ public class EntityHealth : MonoBehaviour
 
         postP.sharedProfile.TryGetSettings<Grain>(out grainInt);
         grainInt.intensity.Override(1-(hp/100));
-        Debug.Log(grainInt.intensity.value);
     }
 
     IEnumerator PrevHealthStart( float damage)

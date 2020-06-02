@@ -24,7 +24,7 @@ public class EnemyAttackScript : MonoBehaviour
     private int cHits = 0;
     private bool dontCheck = false;
 
-   
+    private IEnumerator coroutineEnum;
 
     private void Start()
     {
@@ -51,8 +51,15 @@ public class EnemyAttackScript : MonoBehaviour
             }
             if (other.gameObject.tag == "Parry")
             {
-
+                if (coroutineEnum != null)
+                {
+                    StopCoroutine(coroutineEnum);
+                }
+                sndSrc.enabled = true;
                 sndSrc.PlayOneShot(parryImpactSnd[Random.Range(0, parryImpactSnd.Length)]);
+                coroutineEnum = DisableTimer();
+                StartCoroutine(coroutineEnum);
+
                 StartCoroutine(behaviourBase.stunned(other.transform.position));
                 other.GetComponent<AttackBase>().hitByEnemy();
                 attackBox.enabled = false;
@@ -62,7 +69,15 @@ public class EnemyAttackScript : MonoBehaviour
             {
                 if (visionBase.CheckRay())
                 {
+                    if (coroutineEnum != null)
+                    {
+                        StopCoroutine(coroutineEnum);
+                    }
+                    sndSrc.enabled = true;
                     sndSrc.PlayOneShot(playerImpactSnd[Random.Range(0,playerImpactSnd.Length)]);
+                    coroutineEnum = DisableTimer();
+                    StartCoroutine(coroutineEnum);
+
                     attackBox.enabled = false;
                     other.gameObject.GetComponent<EntityHealth>().ModHealth(attackDmg, transform.up* 2);
                 }
@@ -84,5 +99,11 @@ public class EnemyAttackScript : MonoBehaviour
         {
             hitEnts[i] = 0;
         }
+    }
+
+    IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        sndSrc.enabled = false;
     }
 }

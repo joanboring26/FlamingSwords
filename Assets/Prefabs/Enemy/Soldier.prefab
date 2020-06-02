@@ -166,6 +166,7 @@ MonoBehaviour:
   stunForce: 4
   attackCooldown: 1.8
   stunCooldown: 2.5
+  stunBack: 0
   attackDelay: 0.3
 --- !u!82 &189903894627126395
 AudioSource:
@@ -174,7 +175,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189903894627126393}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243756884487998118, guid: 423773783154716418c6a7335aa9c77a,
     type: 2}
@@ -638,7 +639,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189903895439578080}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243756884487998118, guid: 423773783154716418c6a7335aa9c77a,
     type: 2}
@@ -890,7 +891,8 @@ MonoBehaviour:
   activeAttackColliderTime: 0.45
   attackDmg: -20
   hitPushForce: -4
-  parryRef: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
+  parryRef: {fileID: 7614749807374260543, guid: 6bf9ecada269c8f4fbbcf08f53af66bc,
+    type: 3}
   attackBox: {fileID: 189903896091943550}
   playerImpactSnd:
   - {fileID: 8300000, guid: 62548a644d5c3024591828ee8cba71b3, type: 3}
