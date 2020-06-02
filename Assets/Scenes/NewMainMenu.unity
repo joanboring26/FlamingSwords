@@ -6151,6 +6151,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4941640183126676147, guid: d614af5d11e021743b89d1fbc68856c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4941640183126676146, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6344,12 +6349,12 @@ PrefabInstance:
     - target: {fileID: 4941640184051169006, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4941640184051169006, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4941640184762011834, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
@@ -6409,11 +6414,16 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4941640182990194066, guid: d614af5d11e021743b89d1fbc68856c9,
+    - target: {fileID: 5396637211457708901, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 992779585}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941640183670902235, guid: d614af5d11e021743b89d1fbc68856c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1589351707758986458, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -6444,15 +6454,20 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4941640182990194066, guid: d614af5d11e021743b89d1fbc68856c9,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 992779585}
     - target: {fileID: 7512043197444454294, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7512043197444454294, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1493129612614127536, guid: d614af5d11e021743b89d1fbc68856c9,
         type: 3}

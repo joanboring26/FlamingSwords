@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CamFollower : MonoBehaviour
 {
@@ -8,10 +9,13 @@ public class CamFollower : MonoBehaviour
     public Transform followPos;
     public Transform currPos;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         currPos.parent = null;
+ 
     }
 
     // Update is called once per frame
