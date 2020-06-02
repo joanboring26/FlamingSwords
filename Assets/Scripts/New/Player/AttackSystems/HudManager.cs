@@ -34,13 +34,6 @@ public class HudManager : MonoBehaviour
 
     public void hideItem()
     {
-        /*
-        name.text = "Unknown";
-        type.text = "Unknown";
-        damage.text = "Unknown";
-        attackRate.text = "Unknown";
-        staminaUse.text = "Unknown";
-        */
         inspectHolder.SetActive(false);
     }
 
@@ -59,10 +52,10 @@ public class HudManager : MonoBehaviour
 
     public void setAbility()
     {
-        StartCoroutine(fadeTimer(4));
+        //StartCoroutine(fadeTimer(4));
     }
 
-    public IEnumerator fadeTimer(float fadeTime)
+    public IEnumerator fadeTimer1(float fadeTime)
     {
         num1Fill.fillAmount = 0;
         float fadeDurationInSeconds = fadeTime;

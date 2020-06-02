@@ -58,7 +58,11 @@ public class Explosion : MonoBehaviour
                         Vector2 othPos = targets[i].transform.position;
                         otherPos.x = (othPos.x - transform.position.x);
                         otherPos.y = (othPos.y - transform.position.y);
-                        tmp.AddForce(otherPos * force, ForceMode2D.Impulse);
+
+                        if (tmp != null)
+                        {
+                            tmp.AddForce(otherPos * force, ForceMode2D.Impulse);
+                        }
 
                         //Le aplica caida de daño dependiendo de la distancia de la explosion
                         float tDamage2 = Mathf.Clamp(-damage * 2f - (otherPos.magnitude / damageFalloff), 0, -damage * 2f);

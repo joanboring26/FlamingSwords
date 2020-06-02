@@ -56,7 +56,6 @@ public class EntityHealth : MonoBehaviour
     [Header("Other")]
     public Transform playerRot;
     public CameraShake camShaker;
-    public PCamMover camMover;
     public PCam camHolder;
     public MusicScene musicHolder;
     public CrossTimer crossFiller;
@@ -125,6 +124,7 @@ public class EntityHealth : MonoBehaviour
             hp += givVal;
 
             //Visuals
+            Debug.Log(Mathf.RoundToInt((hp / maxHp) * totalStates));
             currState = Mathf.RoundToInt((hp / maxHp) * totalStates);
             body.sprite = damagedSprites[currState];
 
@@ -138,7 +138,6 @@ public class EntityHealth : MonoBehaviour
             {
                 deadHudMsg.SetActive(true);
                 Destroy(camShaker);
-                Destroy(camMover);
                 Destroy(camHolder);
                 mainCam.transform.parent = null;
                 mainCam.GetComponent<CheckRestar>().enabled = true;
@@ -164,13 +163,13 @@ public class EntityHealth : MonoBehaviour
         {
             Instantiate(explosionRef, transform.position, transform.rotation);
             camShaker.AddCustomShake(-dir, CameraShake.ShakeType.PLAYERDAM);
-            //StartCoroutine(PrevHealthStart(givVal));
+            StartCoroutine(PrevHealthStart(givVal));
 
             nextDamage = Time.time + nextDamageDelay;
             hp += givVal;
 
             //Visuals
-            currState = Mathf.RoundToInt((hp / maxHp) * totalStates);
+            currState = Mathf.Clamp(Mathf.RoundToInt((hp / maxHp) * totalStates), 0, 10);
             body.sprite = damagedSprites[currState];
 
             painSrc.PlayOneShot(hitSnds[Random.Range(0, hitSnds.Length)]);
@@ -179,7 +178,6 @@ public class EntityHealth : MonoBehaviour
             {
                 deadHudMsg.SetActive(true);
                 Destroy(camShaker);
-                Destroy(camMover);
                 Destroy(camHolder);
                 mainCam.transform.parent = null;
                 mainCam.GetComponent<CheckRestar>().enabled = true;
