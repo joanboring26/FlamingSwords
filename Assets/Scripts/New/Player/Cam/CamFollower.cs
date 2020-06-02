@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CamFollower : MonoBehaviour
 {
@@ -8,10 +9,15 @@ public class CamFollower : MonoBehaviour
     public Transform followPos;
     public Transform currPos;
 
+    public PostProcessVolume pp;
+    private Grain grainInt;
+
     // Start is called before the first frame update
     void Start()
     {
         currPos.parent = null;
+        pp.profile.TryGetSettings<Grain>(out grainInt);
+        grainInt.intensity.Override(0);
     }
 
     // Update is called once per frame
