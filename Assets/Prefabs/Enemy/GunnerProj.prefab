@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1785585221803995289}
   - component: {fileID: 8250618294300218094}
   - component: {fileID: 3254143652256404233}
-  m_Layer: 13
+  m_Layer: 19
   m_Name: GunnerProj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rig: {fileID: 8250618294300218094}
+  expl: {fileID: 2512646872202373794, guid: d27f8390fd80f1847ae6496e2c690e0b, type: 3}
   parryTargets:
     serializedVersion: 2
     m_Bits: 1024
@@ -115,7 +116,6 @@ GameObject:
   - component: {fileID: 920122726575727025}
   - component: {fileID: 3064043721835668769}
   - component: {fileID: 6583511180018447546}
-  - component: {fileID: 869669542147669401}
   - component: {fileID: 7611699975924019516}
   m_Layer: 0
   m_Name: Quad (1)
@@ -183,20 +183,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &869669542147669401
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8011284488468659109}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!82 &7611699975924019516
 AudioSource:
   m_ObjectHideFlags: 0

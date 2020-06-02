@@ -38,6 +38,7 @@ public class SoldierAttacks : MonoBehaviour
 
     public float attackCooldown;
     public float stunCooldown;
+    public float stunBack;
 
     public float attackDelay;
 
@@ -67,12 +68,8 @@ public class SoldierAttacks : MonoBehaviour
 
         aiAgent.isStopped = true;
         preAttackSprite.SetActive(true);
-        if (givVision.detectedTransform != null)
+        if ((givVision.detectedTransform != null) && !dontAttack)
         {
-            /*
-            Vector2 atkVector = new Vector2(transform.position.x - attackPos.x, transform.position.y - attackPos.y).normalized;
-            rig.velocity = new Vector2(atkVector.x, atkVector.y) * preAttackSpd;
-            */
             rig.velocity = transform.up * preAttackSpd;
         }
     }

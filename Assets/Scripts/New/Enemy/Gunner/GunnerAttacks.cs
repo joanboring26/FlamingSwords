@@ -89,24 +89,6 @@ public class GunnerAttacks : MonoBehaviour
         sprRender.color = new Color(initCol.r, initCol.g, initCol.b, 255);
     }
 
-    /*
-    IEnumerator ChargeAnimation()
-    {
-        while(
-            sprRender.color.r > targetCol.r + 2f || sprRender.color.r < targetCol.r - 2f &&
-            sprRender.color.g > targetCol.g + 2f || sprRender.color.g < targetCol.g - 2f &&
-            sprRender.color.b > targetCol.b + 2f || sprRender.color.b < targetCol.b - 2f)
-        {
-            sprRender.color = 
-                new Color(
-                Mathf.SmoothStep(sprRender.color.r, targetCol.r, 1f), 
-                Mathf.SmoothStep(sprRender.color.g, targetCol.g, 1f),
-                Mathf.SmoothStep(sprRender.color.b, targetCol.b, 1f));
-            yield return new WaitForEndOfFrame();
-        }
-    }
-    */
-
     public bool CheckRay(Transform detectedTransform)
     {
         RaycastHit2D hitInfo;

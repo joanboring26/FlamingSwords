@@ -4720,7 +4720,6 @@ GameObject:
   - component: {fileID: 1202735866931682849}
   - component: {fileID: 1202735866931682848}
   - component: {fileID: 1202735866931682851}
-  - component: {fileID: 1202735866931682850}
   m_Layer: 10
   m_Name: Mortar
   m_TagString: NPC
@@ -4791,7 +4790,7 @@ MonoBehaviour:
   hitMessage: hitNPC
   explosionRef: {fileID: 1054768076874279320, guid: afceb44bc39807e448d27d37c8bd42f8,
     type: 3}
-  rig: {fileID: 1202735866931682850}
+  rig: {fileID: 0}
   meshRenderer: {fileID: 1202735867153189489}
   damagedSprites:
   - {fileID: 2100000, guid: e865c6e1ca7dd46459d94bdc7d708541, type: 2}
@@ -4802,27 +4801,6 @@ MonoBehaviour:
   deathChunks: {fileID: 8805428298082872499, guid: 1fb54d173ab7cbf4e8eb0a3cd74b95d7,
     type: 3}
   nextDamage: 0.08
---- !u!50 &1202735866931682850
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202735866931682853}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &1202735866998425000
 GameObject:
   m_ObjectHideFlags: 0
