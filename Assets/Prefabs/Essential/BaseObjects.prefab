@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 5113067027950718298, guid: e397fe38872454a4c98653f3afbaea01,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.011962891
+      value: 0.012207031
       objectReference: {fileID: 0}
     - target: {fileID: 4713082334891499762, guid: e397fe38872454a4c98653f3afbaea01,
         type: 3}
@@ -445,7 +445,7 @@ PrefabInstance:
     - target: {fileID: 312030092161067463, guid: e397fe38872454a4c98653f3afbaea01,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.5998535
+      value: 1.6000977
       objectReference: {fileID: 0}
     - target: {fileID: 312030092161067463, guid: e397fe38872454a4c98653f3afbaea01,
         type: 3}
@@ -1040,6 +1040,11 @@ PrefabInstance:
       propertyPath: deathClip
       value: 
       objectReference: {fileID: 8300000, guid: 384aa48795e24dd40ac9f4758eed18ad, type: 3}
+    - target: {fileID: 6567383089465403632, guid: 454853426102c0947b8b3fe893b98032,
+        type: 3}
+      propertyPath: postP
+      value: 
+      objectReference: {fileID: 6453203914055906007}
     - target: {fileID: 6567383088170664006, guid: 454853426102c0947b8b3fe893b98032,
         type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -1074,6 +1079,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 243756884487998118, guid: 423773783154716418c6a7335aa9c77a,
         type: 2}
+    - target: {fileID: 2473800009257813137, guid: 454853426102c0947b8b3fe893b98032,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2937234307886951817, guid: 454853426102c0947b8b3fe893b98032,
         type: 3}
       propertyPath: musicHolder

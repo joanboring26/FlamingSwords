@@ -2873,6 +2873,11 @@ PrefabInstance:
       propertyPath: swingSnds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: d66276d644f11fb4b83294d08855b9c3, type: 3}
+    - target: {fileID: 5162533270422791258, guid: e566fa3429d52a645a7aaf3406daf76b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5162533270422791262, guid: e566fa3429d52a645a7aaf3406daf76b, type: 3}
     - {fileID: 4527732497605424718, guid: e566fa3429d52a645a7aaf3406daf76b, type: 3}

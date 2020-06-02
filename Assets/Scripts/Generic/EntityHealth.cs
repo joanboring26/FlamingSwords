@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class EntityHealth : MonoBehaviour
 {
@@ -66,6 +67,9 @@ public class EntityHealth : MonoBehaviour
     private float minHPBarVal = 0.1f;
     private float newRange = 0;
 
+    public PostProcessVolume postP;
+    private Grain grainInt;
+
     //Escala la vida actual a la barra de vida que tiene el jugador pegada
     public float scaleToHP( float OldValue)
     {
@@ -89,8 +93,11 @@ public class EntityHealth : MonoBehaviour
 
         totalStates = damagedSprites.Length;
         currState = totalStates;
-
+                                                            //Setting initial grain intensity
         prevHealthBar.fillAmount = scaleToHP(prevHealth);
+        postP.sharedProfile.TryGetSettings(out grainInt);
+        grainInt.intensity.Override(0);
+        
 
 
     }
@@ -150,6 +157,8 @@ public class EntityHealth : MonoBehaviour
         }
 
         healthbar.fillAmount = scaleToHP(hp);
+        GrainChange();
+        
     }
 
     public void ModHealth(float givVal, Vector2 dir)
@@ -186,6 +195,7 @@ public class EntityHealth : MonoBehaviour
         }
 
         healthbar.fillAmount = scaleToHP(hp);
+        GrainChange();
     }
 
     public void RecoverPrevHealth(int dealtDamage)
@@ -196,11 +206,23 @@ public class EntityHealth : MonoBehaviour
             hp = Mathf.Clamp(prevHealthRecovery + hp, hp, prevHealth);
             healthbar.fillAmount = scaleToHP(hp);
         }
+
+        GrainChange();
+        prevHealth=hp;
+        prevHealthBar.fillAmount = scaleToHP(hp);
     }
 
     public void ModStamina(float givVal)
     {
         stamina += givVal;
+    }
+
+
+    private void GrainChange(){
+
+        postP.sharedProfile.TryGetSettings<Grain>(out grainInt);
+        grainInt.intensity.Override(1-(hp/100));
+        Debug.Log(grainInt.intensity.value);
     }
 
     IEnumerator PrevHealthStart( float damage)
