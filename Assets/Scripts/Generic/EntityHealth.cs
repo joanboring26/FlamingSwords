@@ -41,7 +41,6 @@ public class EntityHealth : MonoBehaviour
     public GameObject explosionRef;
 
     [Header("Damaged visuals")]
-    public Material damagedMat;
     public SpriteRenderer body;
     public Sprite[] damagedSprites;
     int totalStates;
@@ -79,7 +78,6 @@ public class EntityHealth : MonoBehaviour
 
     private void Start()
     {
-        damagedMat.color = new Color(1, 1, 1,0);
         newRange = (maxHPBarVal - minHPBarVal);
 
         prevHealth = hp;
@@ -127,7 +125,6 @@ public class EntityHealth : MonoBehaviour
             hp += givVal;
 
             //Visuals
-            damagedMat.color = new Color(damagedMat.color.r, (hp / maxHp), damagedMat.color.b, damagedMat.color.a);
             currState = Mathf.RoundToInt((hp / maxHp) * totalStates);
             body.sprite = damagedSprites[currState];
 
@@ -173,7 +170,6 @@ public class EntityHealth : MonoBehaviour
             hp += givVal;
 
             //Visuals
-            damagedMat.color = new Color((hp / maxHp), (hp / maxHp), damagedMat.color.b, damagedMat.color.a);
             currState = Mathf.RoundToInt((hp / maxHp) * totalStates);
             body.sprite = damagedSprites[currState];
 
