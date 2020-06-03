@@ -167,9 +167,10 @@ public class EntityHealth : MonoBehaviour
 
             nextDamage = Time.time + nextDamageDelay;
             hp += givVal;
+            hp = Mathf.Clamp(hp, 0, 100);
 
             //Visuals
-            currState = Mathf.Clamp(Mathf.RoundToInt((hp / maxHp) * totalStates), 0, 10);
+            currState = Mathf.Clamp(Mathf.RoundToInt((hp / maxHp) * totalStates), 0, totalStates);
             body.sprite = damagedSprites[currState];
 
             painSrc.PlayOneShot(hitSnds[Random.Range(0, hitSnds.Length)]);
