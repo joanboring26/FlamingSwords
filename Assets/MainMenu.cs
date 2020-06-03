@@ -45,6 +45,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        Debug.Log("mepirogampiro");
         Application.Quit();
     }
 
