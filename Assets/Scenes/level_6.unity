@@ -22345,11 +22345,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 3225565259485662119, guid: 9215e89fabc7c0c49a7306a1cd0b39e2,
-        type: 3}
-      propertyPath: numOfEnemies
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8442783604920754178, guid: 9215e89fabc7c0c49a7306a1cd0b39e2,
         type: 3}
       propertyPath: m_Size.x
@@ -22374,6 +22369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225565259485662119, guid: 9215e89fabc7c0c49a7306a1cd0b39e2,
+        type: 3}
+      propertyPath: numOfEnemies
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3225565259485662119, guid: 9215e89fabc7c0c49a7306a1cd0b39e2, type: 3}
@@ -22567,6 +22567,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fireDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
@@ -44157,6 +44167,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1001 &694177542
@@ -53942,6 +53962,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1001 &758980985
@@ -54375,6 +54405,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fireDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
@@ -59552,6 +59592,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1 &975278233
@@ -60734,6 +60784,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fireDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
@@ -67046,6 +67106,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1 &1438947432
@@ -67168,6 +67238,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fireDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
@@ -72305,6 +72385,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1001 &1491446241
@@ -72383,6 +72473,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fireDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
@@ -77952,6 +78052,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1334985597298996440, guid: 840574b1279c30c4591a7f273b22d46f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1334985597298996443, guid: 840574b1279c30c4591a7f273b22d46f,
         type: 3}
       propertyPath: objPoint
@@ -77962,11 +78067,6 @@ PrefabInstance:
       propertyPath: playerPoint
       value: 
       objectReference: {fileID: 363039696}
-    - target: {fileID: 1334985597298996440, guid: 840574b1279c30c4591a7f273b22d46f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8740989546033822395, guid: 840574b1279c30c4591a7f273b22d46f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 840574b1279c30c4591a7f273b22d46f, type: 3}
@@ -98418,6 +98518,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1 &1841071647
@@ -104052,6 +104162,16 @@ PrefabInstance:
       propertyPath: fireDelay
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
 --- !u!1 &1982653103
@@ -108886,6 +109006,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fireDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615223066733236444, guid: 6710a688cb6dd474e83de22fa54ad0e9,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6710a688cb6dd474e83de22fa54ad0e9, type: 3}
