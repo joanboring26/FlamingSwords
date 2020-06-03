@@ -4036,7 +4036,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.300003, y: -3.4}
+  m_AnchoredPosition: {x: -46.300003, y: -24.9}
   m_SizeDelta: {x: 40.87, y: 6.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4941640183029532211
@@ -4434,8 +4434,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.29999, y: 0.5999999}
-  m_SizeDelta: {x: 70.7, y: 12.73}
+  m_AnchoredPosition: {x: 51.4, y: 0.5999999}
+  m_SizeDelta: {x: 59.14, y: 12.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4941640183108679056
 CanvasRenderer:
@@ -5259,6 +5259,7 @@ GameObject:
   - component: {fileID: 4941640183915353267}
   - component: {fileID: 4941640183915353260}
   - component: {fileID: 4941640183915353261}
+  - component: {fileID: 524226853658501097}
   m_Layer: 5
   m_Name: Template
   m_TagString: Untagged
@@ -5356,6 +5357,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &524226853658501097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941640183915353263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c667f37ff2764141bc24720009e2d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4941640183962283293
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,7 +5628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.8, y: 18.4}
+  m_AnchoredPosition: {x: -51.8, y: 15.5}
   m_SizeDelta: {x: 37.31, y: 6.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4941640184086744808
@@ -5774,7 +5787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.9, y: -27.100002}
+  m_AnchoredPosition: {x: -45.9, y: -2.1}
   m_SizeDelta: {x: 40.87, y: 6.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4941640184187822675
@@ -5968,8 +5981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2000008, y: -0.5}
-  m_SizeDelta: {x: -22.8, y: -8.16}
+  m_AnchoredPosition: {x: 0.000005722046, y: -0.00000047683716}
+  m_SizeDelta: {x: 0.000015259, y: 0.000002861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4941640184459626723
 CanvasRenderer:
@@ -6044,7 +6057,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0

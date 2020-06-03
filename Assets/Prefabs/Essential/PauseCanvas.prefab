@@ -960,7 +960,6 @@ MonoBehaviour:
   backButton: {fileID: 2181888726511793}
   optionsButton: {fileID: 2182591872035776579}
   resumeButton: {fileID: 4763539547096934846}
-  television: {fileID: 0}
 --- !u!114 &568105439208349732
 MonoBehaviour:
   m_ObjectHideFlags: 0
