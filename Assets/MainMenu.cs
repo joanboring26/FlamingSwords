@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("mepirogampiro");
+        
         Application.Quit();
     }
 
@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("IntroGame");
+            SceneManager.LoadScene("IntroBackground");
         }
     }
 

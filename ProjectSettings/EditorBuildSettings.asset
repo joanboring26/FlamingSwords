@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroBackground.unity
     guid: 29c159bfb69f9f74594af020af0275aa
-  - enabled: 0
-    path: Assets/Scenes/IntroGame.unity
-    guid: e7ba808b683a68f4a9ef2f5af3cbd916
-  - enabled: 1
-    path: Assets/Scenes/NewMainMenu.unity
-    guid: 811c3e328d27c7240a24a5668d9dc8d7
   - enabled: 1
     path: Assets/Scenes/2d Tutorial.unity
     guid: 3350fcac56d3a244bbc19bad206b87d3
