@@ -123,6 +123,13 @@ public class EntityHealth : MonoBehaviour
             nextDamage = Time.time + nextDamageDelay;
             hp += givVal;
 
+            if(givVal > 0)
+            {
+                prevHealth = hp;
+                prevHealthBar.fillAmount = scaleToHP(hp);
+                healthbar.fillAmount = scaleToHP(hp);
+            }
+
             //Visuals
             Debug.Log(Mathf.RoundToInt((hp / maxHp) * totalStates));
             currState = Mathf.RoundToInt((hp / maxHp) * totalStates);
@@ -168,6 +175,13 @@ public class EntityHealth : MonoBehaviour
             nextDamage = Time.time + nextDamageDelay;
             hp += givVal;
             hp = Mathf.Clamp(hp, 0, 100);
+
+            if (givVal > 0)
+            {
+                prevHealth = hp;
+                prevHealthBar.fillAmount = scaleToHP(hp);
+                healthbar.fillAmount = scaleToHP(hp);
+            }
 
             //Visuals
             currState = Mathf.Clamp(Mathf.RoundToInt((hp / maxHp) * totalStates), 0, totalStates);
