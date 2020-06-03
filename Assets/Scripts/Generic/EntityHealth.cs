@@ -122,8 +122,9 @@ public class EntityHealth : MonoBehaviour
             }
             nextDamage = Time.time + nextDamageDelay;
             hp += givVal;
+            hp = Mathf.Clamp(hp, 0, 100);
 
-            if(givVal > 0)
+            if (givVal > 0)
             {
                 prevHealth = hp;
                 prevHealthBar.fillAmount = scaleToHP(hp);
